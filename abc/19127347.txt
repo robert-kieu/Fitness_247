@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Q1:
 Generally, the most non-functional requirements for design system architecture as follows:
 - Performance
@@ -24,3 +25,6 @@ iTunes will have a database that has records on all the music that is available 
 These music records can be searched for by the user by artist name, genre, etc., through a
 web based interface and downloaded for a certain price. The server handles music orders through the web based interface.
 ==> The architectural pattern that is the basis for this is client-server pattern.
+=======
+Kiều Hải Đăng
+>>>>>>> Stashed changes
