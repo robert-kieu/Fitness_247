@@ -11,6 +11,7 @@
         android:theme="@style/Theme.Fitness247">
         <activity android:name=".Activity.IntroActivity"></activity>
         <activity android:name=".Activity.Ex_lstActivity"></activity>
+        <activity android:name=".Activity.Show_ex_detailActivity"></activity>
         <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
