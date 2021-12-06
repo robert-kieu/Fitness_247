@@ -3,6 +3,10 @@ package com.example.fitness247.Activity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.view.View;
+import android.widget.TextView;
+import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,11 +16,13 @@ import com.example.fitness247.Adapter.Ex_Lst_Adapter;
 import com.example.fitness247.Domain.Ex_Lst_Domain;
 import com.example.fitness247.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Ex_lstActivity extends AppCompatActivity {
+public class Ex_lstActivity extends AppCompatActivity  implements Serializable {
     private RecyclerView.Adapter adapter;
     private RecyclerView recycleView_ex_list;
+    private TextView back_btn, start_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,5 +53,25 @@ public class Ex_lstActivity extends AppCompatActivity {
 
         adapter = new Ex_Lst_Adapter(ex_lst);
         recycleView_ex_list.setAdapter(adapter);
+
+        back_btn = findViewById(R.id.back_btn_at_ex_lst);
+        start_btn = findViewById(R.id.Start_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
+
+        start_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), Ex_PracticeActivity.class);
+//                i.putExtra("object", (Parcelable) adapter);
+                startActivity(i);
+            }
+        });
     }
 }

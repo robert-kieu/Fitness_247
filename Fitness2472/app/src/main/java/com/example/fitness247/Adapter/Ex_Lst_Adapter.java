@@ -11,18 +11,22 @@ import android.widget.TextView;
 import android.content.Intent;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.view.menu.MenuView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.fitness247.Activity.MainActivity;
 import com.example.fitness247.Domain.Ex_Lst_Domain;
 import com.example.fitness247.R;
 import com.example.fitness247.Activity.Ex_lstActivity;
 import com.example.fitness247.Activity.Show_ex_detailActivity;
+import com.example.fitness247.Activity.Ex_PracticeActivity;
 
 import java.util.ArrayList;
 import java.io.Serializable;
+import androidx.appcompat.view.menu.MenuView.ItemView;
 
 public class Ex_Lst_Adapter extends RecyclerView.Adapter<Ex_Lst_Adapter.ViewHolder> implements Serializable{
     ArrayList<Ex_Lst_Domain> Ex_Lst_Domains;
@@ -37,6 +41,7 @@ public class Ex_Lst_Adapter extends RecyclerView.Adapter<Ex_Lst_Adapter.ViewHold
         View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_view_holder_ex_list, parent, false);
 
         return new ViewHolder(inflate);
+
     }
 
     @Override
