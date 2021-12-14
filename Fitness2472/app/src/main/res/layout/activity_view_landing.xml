@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <TextView
+        android:id="@+id/txtlanding"
+        android:layout_width="267dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:inputType="none"
+        android:text="FITNESS 247"
+        android:textAlignment="center"
+        android:textColor="#F6D529"
+        android:textSize="43sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/signup_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="265sp"
+        android:layout_height="41sp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/log_but"
+        android:text="Sign up"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/login_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtlanding"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="265sp"
+        android:layout_height="41sp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="144dp"
+        android:background="@drawable/log_but"
+        android:text="Login"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_btn"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="141sp"
+        android:layout_height="141sp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtlanding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/login_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
