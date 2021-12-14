@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#000000">
 
-    <EditText
+    <TextView
         android:id="@+id/txtlanding"
         android:layout_width="267dp"
         android:layout_height="89dp"
@@ -15,7 +15,7 @@
         android:layout_marginEnd="72dp"
         android:layout_marginBottom="26dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="none"
         android:text="FITNESS 247"
         android:textAlignment="center"
         android:textColor="#F6D529"

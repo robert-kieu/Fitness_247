@@ -6,10 +6,14 @@
     android:layout_height="match_parent"
     android:background="#000000">
 
-    <EditText
+    <TextView
         android:id="@+id/txt_login"
         android:layout_width="255sp"
         android:layout_height="92sp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="2dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="LOGIN"
@@ -17,67 +21,98 @@
         android:textColor="#F6D529"
         android:textSize="43sp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/login_btn2"
         android:layout_width="265sp"
         android:layout_height="41sp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="91dp"
         android:background="@drawable/log_but"
         android:text="Login"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="519dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpass"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="141dp"
         android:layout_height="141dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="33dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_login"
         app:srcCompat="@mipmap/login_icon"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="187dp"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/txtpass"
         android:layout_width="265sp"
         android:layout_height="49sp"
+        android:layout_marginStart="73dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="27dp"
         android:background="@drawable/log_but"
         android:ems="10"
-        android:hint="Password"
+        android:hint="    Password"
         android:inputType="textPersonName"
         android:singleLine="false"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="424dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_btn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_user"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/txt_user"
         android:layout_width="265sp"
         android:layout_height="49sp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="14dp"
         android:background="@drawable/log_but"
         android:ems="10"
-        android:hint="Email address"
+        android:hint="    Email address"
         android:inputType="textPersonName"
         android:singleLine="false"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="360dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtpass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/back_btn2"
         android:layout_width="48dp"
         android:layout_height="48dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="349dp"
+        android:layout_marginBottom="595dp"
         android:background="@drawable/back_log_but"
         android:text="←"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

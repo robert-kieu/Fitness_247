@@ -12,33 +12,40 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.fitness247.R;
 
 public class Login_Activity extends AppCompatActivity {
-    Button login;
+    Button login, back2;
     EditText username,password;
 
     @Override
-    protected void onCreate( Bundle savedInstanceState) {
+    public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_login_page);
         login=(Button) findViewById(R.id.login_btn2);
         username=(EditText) findViewById(R.id.txt_user);
         password=(EditText) findViewById(R.id.txtpass);
+        back2 =(Button)findViewById(R.id.back_btn2);
+        back2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(),Landing_Activity.class));
+            }
+        });
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                login();
+                login(v);
             }
         });
     }
 
-    public void login(){
+    public void login(View v){
         String user=username.getText().toString().trim();
         String pass=password.getText().toString().trim();
         if(user.equals("admin")&&pass.equals("Admin123")){
             Toast.makeText(this,"Authentication successful!",Toast.LENGTH_LONG).show();
-            Intent i=new Intent(Login_Activity.this,IntroActivity.class);
+            Intent i=new Intent(v.getContext(),MainActivity.class);
             startActivity(i);
         }else {
-            Toast.makeText(this,"Authentication failed! Wrong Username or Password",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Authentication failed!\nWrong Username or Password!",Toast.LENGTH_LONG).show();
         }
     }
 }
