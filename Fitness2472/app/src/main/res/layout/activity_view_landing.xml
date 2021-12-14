@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <EditText
+        android:id="@+id/txtlanding"
+        android:layout_width="267dp"
+        android:layout_height="89dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="FITNESS 247"
+        android:textAlignment="center"
+        android:textColor="#F6D529"
+        android:textSize="43sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="265sp"
+        android:layout_height="41sp"
+        android:background="@drawable/log_but"
+        android:text="Sign up"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="411dp" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="265sp"
+        android:layout_height="41sp"
+        android:background="@drawable/log_but"
+        android:text="Login"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="475dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="141sp"
+        android:layout_height="141sp"
+        app:srcCompat="@mipmap/login_icon"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="141dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

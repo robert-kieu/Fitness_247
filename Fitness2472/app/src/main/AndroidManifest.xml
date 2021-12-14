@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitness247">
+        <activity android:name=".Activity.Landing_Activity"></activity>
+        <activity android:name=".Activity.Login_Activity"></activity>
         <activity android:name=".Activity.IntroActivity"></activity>
         <activity android:name=".Activity.Ex_lstActivity"></activity>
         <activity android:name=".Activity.Show_ex_detailActivity"></activity>
