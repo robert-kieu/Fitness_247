@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.content.Context;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fitness247.Adapter.Main_Lst_Adapter;
 import com.example.fitness247.Domain.Main_Lst_Domain;
@@ -17,8 +20,10 @@ import com.example.fitness247.Domain.Main_Lst_Domain;
 import java.util.ArrayList;
 
 import com.example.fitness247.R;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    LinearLayout profile_button;
     private RecyclerView.Adapter adapter, adapter_exercise;
     private RecyclerView recycleView_main_list, recyclerView_ex_list;
 
@@ -27,7 +32,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView_main_list();
+
+        profile_button = findViewById(R.id.profile_button);
+        profile_button.setOnClickListener(mListener);
     }
+
+    View.OnClickListener mListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View view)
+        {
+            int id = view.getId();
+            switch(id)
+            {
+                case R.id.profile_button:
+                    Intent intent = new Intent(MainActivity.this,UserProfile.class);
+                    startActivity(intent);
+
+                    break;
+                default:
+                    break;
+            }
+        }
+
+    };
 
     private void recyclerView_main_list() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);

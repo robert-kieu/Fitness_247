@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitness247">
-        <activity android:name=".Activity.IntroActivity"></activity>
-        <activity android:name=".Activity.Ex_lstActivity"></activity>
-        <activity android:name=".Activity.Show_ex_detailActivity"></activity>
-        <activity android:name=".Activity.Ex_PracticeActivity"></activity>
+        <activity android:name=".Activity.UserProfile"/>
+        <activity android:name=".Activity.IntroActivity" />
+        <activity android:name=".Activity.Ex_lstActivity" />
+        <activity android:name=".Activity.Show_ex_detailActivity" />
+        <activity android:name=".Activity.Ex_PracticeActivity" />
         <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
