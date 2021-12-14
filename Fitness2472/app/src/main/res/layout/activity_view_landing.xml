@@ -10,6 +10,10 @@
         android:id="@+id/txtlanding"
         android:layout_width="267dp"
         android:layout_height="89dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="26dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="FITNESS 247"
@@ -17,40 +21,60 @@
         android:textColor="#F6D529"
         android:textSize="43sp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="285dp" />
+        app:layout_constraintBottom_toTopOf="@+id/signup_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/signup_btn"
         android:layout_width="265sp"
         android:layout_height="41sp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="23dp"
         android:background="@drawable/log_but"
         android:text="Sign up"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="411dp" />
+        app:layout_constraintBottom_toTopOf="@+id/login_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtlanding"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/login_btn"
         android:layout_width="265sp"
         android:layout_height="41sp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="144dp"
         android:background="@drawable/log_but"
         android:text="Login"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="475dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_btn"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="141sp"
         android:layout_height="141sp"
-        app:srcCompat="@mipmap/login_icon"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="141dp" />
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtlanding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/login_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

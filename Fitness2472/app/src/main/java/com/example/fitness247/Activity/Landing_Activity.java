@@ -3,6 +3,7 @@ package com.example.fitness247.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,29 +15,27 @@ import com.example.fitness247.R;
 
 
 public class Landing_Activity extends AppCompatActivity {
-    private TextView signup_btn;
-    private TextView login_btn;
-
+    Button signup=(Button) findViewById((R.id.signup_btn));
+    Button login=(Button) findViewById(R.id.login_btn);
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_view_landing);
 
-        login_btn.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(Landing_Activity.this,Login_Activity.class);
                 startActivity(i);
             }
         });
-        signup_btn.setOnClickListener(new View.OnClickListener() {
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i=new Intent(Landing_Activity.this,Login_Activity.class);
+                startActivity(i);
             }
         });
-
-
     }
 }
 

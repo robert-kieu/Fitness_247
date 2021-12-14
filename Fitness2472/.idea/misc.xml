@@ -15,14 +15,12 @@
         <entry key="..\:/Learning/SE/Project/android/Fitness_247/Fitness2472/app/src/main/res/layout/activity_view_holder_ex_list.xml" value="0.16893115942028986" />
         <entry key="..\:/Learning/SE/Project/android/Fitness_247/Fitness2472/app/src/main/res/layout/activity_view_holder_main.xml" value="0.16893115942028986" />
         <entry key="..\:/Learning/SE/Project/android/Fitness_247/Fitness2472/app/src/main/res/layout/activity_view_landing.xml" value="0.176" />
+        <entry key="..\:/Learning/SE/Project/android/Fitness_247/Fitness2472/app/src/main/res/layout/activity_view_landing_page.xml" value="0.2259963768115942" />
         <entry key="..\:/Learning/SE/Project/android/Fitness_247/Fitness2472/app/src/main/res/layout/activity_view_login_page.xml" value="0.2905405405405405" />
         <entry key="..\:/Learning/SE/Project/android/Fitness_247/Fitness2472/app/src/main/res/layout/landing-page.xml" value="0.536" />
         <entry key="..\:/Learning/SE/Project/android/Fitness_247/Fitness2472/app/src/main/res/layout/landing_page.xml" value="0.264" />
       </map>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/landing_page.xml" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
