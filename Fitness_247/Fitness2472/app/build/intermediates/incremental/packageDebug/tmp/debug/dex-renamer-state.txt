@@ -1,0 +1,7 @@
+#Tue Dec 21 21:45:25 ICT 2021
+base.1=E\:\\Fitness_247\\Fitness2472\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+path.1=classes.dex
+base.0=E\:\\Fitness_247\\Fitness2472\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex
