@@ -60,7 +60,7 @@ public class Ex_lstActivity extends AppCompatActivity  implements Serializable {
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), MainActivity.class);
+                Intent i = new Intent(v.getContext(), Ex_typeActivity.class);
                 startActivity(i);
             }
         });
@@ -69,7 +69,7 @@ public class Ex_lstActivity extends AppCompatActivity  implements Serializable {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), Ex_PracticeActivity.class);
-//                i.putExtra("object", (Parcelable) adapter);
+                i.putExtra("object_lst", ex_lst);
                 startActivity(i);
             }
         });

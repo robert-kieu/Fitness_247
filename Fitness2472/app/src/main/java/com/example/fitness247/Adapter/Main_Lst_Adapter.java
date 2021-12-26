@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.fitness247.Activity.Ex_lstActivity;
+import com.example.fitness247.Activity.Ex_typeActivity;
 import com.example.fitness247.Domain.Main_Lst_Domain;
 import com.example.fitness247.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -47,7 +48,7 @@ public class Main_Lst_Adapter extends RecyclerView.Adapter<Main_Lst_Adapter.View
                 holder.tab_layout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i = new Intent(holder.itemView.getContext(), Ex_lstActivity.class);
+                        Intent i = new Intent(holder.itemView.getContext(), Ex_typeActivity.class);
                         holder.itemView.getContext().startActivity(i);
                     }
                 });
