@@ -1,5 +1,6 @@
 package com.example.fitness247.Activity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.TextView;
@@ -14,6 +15,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,6 +36,7 @@ public class Ex_PracticeActivity extends AppCompatActivity implements Serializab
 
     private ArrayList<Ex_Lst_Domain> object_lst;
     private int start, current, end;
+    public int sum_duration = 0, sum_kcal = 0;
 
     @Override
     protected void onCreate(Bundle saveInstanceState){
@@ -49,18 +52,47 @@ public class Ex_PracticeActivity extends AppCompatActivity implements Serializab
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 
     private void practice() throws InterruptedException {
-
+//        next_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_LONG).show();
+//            }
+//        });
+//        previous_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_LONG).show();
+//            }
+//        });
+        sum_duration += object_lst.get(current).getDuration() * 1000;
         ex_title.setText(object_lst.get(current).getTitle());
-        countdown(object_lst.get(current));
+        countdown_ex(object_lst.get(current).getDuration());
+    }
+
+    private void rest() throws InterruptedException {
+//        next_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_LONG).show();
+//            }
+//        });
+//        previous_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_LONG).show();
+//            }
+//        });
+
+        ex_title.setText("Break Time");
+        countdown_rest(object_lst.get(current - 1).getDuration() - 20);
     }
 
 
-    private void countdown(Ex_Lst_Domain object){
-        new CountDownTimer(object.getDuration() * 1000 + 1, 1000) {
+    private void countdown_ex(int time){
+        new CountDownTimer(time * 1000 + 1, 1000) {
             public void onTick(long millisUntilFinished) {
                 // Used for formatting digit to be in 2 digits only
                 NumberFormat f = new DecimalFormat("00");
@@ -73,6 +105,35 @@ public class Ex_PracticeActivity extends AppCompatActivity implements Serializab
                 ex_duration.setText("00:00");
                 current++;
                 if (current < end){
+                    try {
+                        rest();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else{
+                    Intent intent = new Intent(getBaseContext(), Ex_doneActivity.class);
+                    intent.putExtra("sum_duration", sum_duration);
+                    intent.putExtra("sum_kcal", sum_kcal);
+                    startActivity(intent);
+                }
+            }
+        }.start();
+    }
+
+    private void countdown_rest(int time){
+        new CountDownTimer(time * 1000 + 1, 1000) {
+            public void onTick(long millisUntilFinished) {
+                // Used for formatting digit to be in 2 digits only
+                NumberFormat f = new DecimalFormat("00");
+                long min = (millisUntilFinished / 60000) % 60;
+                long sec = (millisUntilFinished / 1000) % 60;
+                ex_duration.setText(f.format(min) + ":" + f.format(sec));
+            }
+            // When the task is over it will print 00:00 there
+            public void onFinish() {
+                ex_duration.setText("00:00");
+                if (current < 2){
                     try {
                         practice();
                     } catch (InterruptedException e) {

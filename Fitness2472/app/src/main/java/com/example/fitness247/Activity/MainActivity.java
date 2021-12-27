@@ -23,7 +23,7 @@ import com.example.fitness247.R;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    LinearLayout profile_button;
+    LinearLayout profile_button, supports_button;
     private RecyclerView.Adapter adapter, adapter_exercise;
     private RecyclerView recycleView_main_list, recyclerView_ex_list;
 
@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
         profile_button = findViewById(R.id.profile_button);
         profile_button.setOnClickListener(mListener);
+
+        supports_button = findViewById(R.id.support_button);
+        supports_button.setOnClickListener(mListener);
     }
 
     View.OnClickListener mListener = new View.OnClickListener(){
@@ -48,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this,UserProfile.class);
                     startActivity(intent);
 
+                    break;
+                case R.id.support_button:
+                    intent = new Intent(MainActivity.this,Supports_Activity.class);
+                    startActivity(intent);
                     break;
                 default:
                     break;
