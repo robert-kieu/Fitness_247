@@ -25,6 +25,7 @@
         <activity android:name=".Activity.Show_ex_detailActivity" />
         <activity android:name=".Activity.Ex_PracticeActivity" />
         <activity android:name=".Activity.MainActivity"/>
+        <activity android:name=".Activity.SignUpActivity"/>
     </application
         >
 
