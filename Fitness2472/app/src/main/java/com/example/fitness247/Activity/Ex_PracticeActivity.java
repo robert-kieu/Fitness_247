@@ -55,36 +55,36 @@ public class Ex_PracticeActivity extends AppCompatActivity implements Serializab
     }
 
     private void practice() throws InterruptedException {
-//        next_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_LONG).show();
-//            }
-//        });
-//        previous_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_LONG).show();
-//            }
-//        });
+        next_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_SHORT).show();
+            }
+        });
+        previous_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_SHORT).show();
+            }
+        });
         sum_duration += object_lst.get(current).getDuration() * 1000;
         ex_title.setText(object_lst.get(current).getTitle());
         countdown_ex(object_lst.get(current).getDuration());
     }
 
     private void rest() throws InterruptedException {
-//        next_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_LONG).show();
-//            }
-//        });
-//        previous_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_LONG).show();
-//            }
-//        });
+        next_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_SHORT).show();
+            }
+        });
+        previous_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_SHORT).show();
+            }
+        });
 
         ex_title.setText("Break Time");
         countdown_rest(object_lst.get(current - 1).getDuration() - 20);

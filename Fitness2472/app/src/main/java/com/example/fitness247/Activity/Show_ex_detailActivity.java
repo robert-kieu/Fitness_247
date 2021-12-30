@@ -10,18 +10,9 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import android.os.Bundle;
-import android.widget.Toast;
-import androidx.annotation.Nullable;
-import com.google.android.youtube.player.YouTubeInitializationResult;
-import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayerView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bumptech.glide.Glide;
 import com.example.fitness247.Domain.Ex_Lst_Domain;
-import com.example.fitness247.Domain.ExerciseDomain;
 import com.example.fitness247.R;
 
 public class Show_ex_detailActivity extends AppCompatActivity {

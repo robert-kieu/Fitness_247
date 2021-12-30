@@ -21,7 +21,6 @@
         <activity android:name=".Activity.Login_Activity"/>
         <activity android:name=".Activity.Supports_Activity"/>
         <activity android:name=".Activity.UserProfile"/>
-        <activity android:name=".Activity.IntroActivity" />
         <activity android:name=".Activity.Ex_lstActivity" />
         <activity android:name=".Activity.Show_ex_detailActivity" />
         <activity android:name=".Activity.Ex_PracticeActivity" />
