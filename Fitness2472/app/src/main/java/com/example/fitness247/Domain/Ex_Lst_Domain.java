@@ -10,14 +10,14 @@ public class Ex_Lst_Domain implements Serializable {
     private String title;
     private int duration;
     private String description;
-    private String video_code;
+    private String pic;
 
 
-    public Ex_Lst_Domain(String title, String video_code, String description, int duration) {
+    public Ex_Lst_Domain(String title, String pic, String description, int duration) {
         this.title = title;
         this.duration = duration;
         this.description = description;
-        this.video_code = video_code;
+        this.pic = pic;
     }
 
     public int getDuration() {
@@ -44,11 +44,11 @@ public class Ex_Lst_Domain implements Serializable {
         this.title = title;
     }
 
-    public String getVideo_code() {
-        return video_code;
+    public String getPic() {
+        return pic;
     }
 
-    public void setVideo_code(String pic) {
-        this.video_code = pic;
+    public void setPic(String pic) {
+        this.pic = pic;
     }
 }

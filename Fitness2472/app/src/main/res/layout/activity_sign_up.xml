@@ -7,7 +7,7 @@
     android:background="#000000">
 
     <TextView
-        android:id="@+id/txt_login"
+        android:id="@+id/txt_sign_up"
         android:layout_width="255sp"
         android:layout_height="92sp"
         android:layout_marginStart="78dp"
@@ -15,8 +15,8 @@
         android:layout_marginEnd="78dp"
         android:layout_marginBottom="2dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="LOGIN"
+        android:inputType="textPassword"
+        android:text="SIGN UP"
         android:textAlignment="center"
         android:textColor="#F6D529"
         android:textSize="43sp"
@@ -28,7 +28,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/login_btn2"
+        android:id="@+id/btn_sign_up"
         android:layout_width="265sp"
         android:layout_height="41sp"
         android:layout_marginStart="73dp"
@@ -37,14 +37,14 @@
         android:layout_marginBottom="91dp"
         android:background="@drawable/log_but"
         android:backgroundTint="#F5D529"
-        android:text="Login"
+        android:text="Sign Up"
         android:textSize="24sp"
         style="@style/Widget.AppCompat.Button.Colored"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtpass"
+        app:layout_constraintTop_toBottomOf="@+id/add_pass"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -55,15 +55,15 @@
         android:layout_marginTop="2dp"
         android:layout_marginEnd="135dp"
         android:layout_marginBottom="33dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_user"
+        app:layout_constraintBottom_toTopOf="@+id/add_user"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_login"
+        app:layout_constraintTop_toBottomOf="@+id/txt_sign_up"
         app:srcCompat="@mipmap/login_icon"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/txtpass"
+        android:id="@+id/add_pass"
         android:layout_width="265sp"
         android:layout_height="49sp"
         android:layout_marginStart="73dp"
@@ -72,16 +72,16 @@
         android:background="@drawable/log_but"
         android:ems="10"
         android:hint="    Password"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:singleLine="false"
-        app:layout_constraintBottom_toTopOf="@+id/login_btn2"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sign_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_user"
+        app:layout_constraintTop_toBottomOf="@+id/add_user"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/txt_user"
+        android:id="@+id/add_user"
         android:layout_width="265sp"
         android:layout_height="49sp"
         android:layout_marginStart="73dp"
@@ -93,14 +93,14 @@
         android:hint="    Email address"
         android:inputType="textPersonName"
         android:singleLine="false"
-        app:layout_constraintBottom_toTopOf="@+id/txtpass"
+        app:layout_constraintBottom_toTopOf="@+id/add_pass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/back_btn2"
+        android:id="@+id/back_sign_up"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="48dp"
         android:layout_height="48dp"
