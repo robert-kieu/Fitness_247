@@ -9,130 +9,173 @@
     tools:context=".Activity.UserProfile">
 
 
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="405dp"
+        android:layout_height="277dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="120sp"
+                android:layout_height="30dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginEnd="73dp"
+                android:text="Name:"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/ed_full_name"
+                android:layout_width="265sp"
+                android:layout_height="50dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginEnd="73dp"
+                android:layout_marginBottom="26dp"
+                android:background="@drawable/log_but"
+                android:ems="10"
+                android:hint="    User Name"
+                android:inputType="textPersonName"
+                android:singleLine="false"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="120sp"
+                android:layout_height="30dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginEnd="73dp"
+                android:text="Weight (kg):"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints" />
+            <EditText
+                android:id="@+id/ed_weight"
+                android:layout_width="262dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginEnd="73dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/log_but"
+                android:ems="10"
+                android:hint="    Weight Value"
+                android:inputType="number"
+                android:singleLine="true"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_width="120sp"
+                android:layout_height="30dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginEnd="73dp"
+                android:text="Height (cm):"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/ed_height"
+                android:layout_width="262dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginEnd="73dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/log_but"
+                android:ems="10"
+                android:hint="    Height Value"
+                android:inputType="number"
+                android:singleLine="true"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="120sp"
+                android:layout_height="30dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginEnd="73dp"
+                android:text="BMI:"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/tv_bmi"
+                android:layout_width="265sp"
+                android:layout_height="37dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginEnd="73dp"
+                android:layout_marginBottom="28dp"
+                android:background="@drawable/log_but"
+                android:hint="   BMI Value"
+                android:singleLine="true"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints" />
+
+            <CalendarView
+                android:id="@+id/calendarView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="405dp"
-        android:layout_height="129dp"
+        android:layout_width="115dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="30dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_user"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="140dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="145dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:src="@drawable/profile"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/ed_full_name"
-        android:layout_width="265sp"
-        android:layout_height="0dp"
-        android:layout_marginStart="73dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="26dp"
-        android:background="@drawable/log_but"
-        android:ems="10"
-        android:hint="    User Name"
-        android:inputType="textPersonName"
-        android:singleLine="false"
-        app:layout_constraintBottom_toTopOf="@+id/tv_bmi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/tv_bmi"
-        android:layout_width="265sp"
-        android:layout_height="0dp"
-        android:layout_marginStart="73dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/log_but"
-        android:ems="10"
-        android:hint="    BMI Value"
-        android:inputType="textPersonName"
-        android:singleLine="false"
-        app:layout_constraintBottom_toTopOf="@+id/ed_height"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ed_full_name"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/ed_height"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="73dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/log_but"
-        android:ems="10"
-        android:hint="    Height Value"
-        android:inputType="textPersonName"
-        android:singleLine="false"
-        app:layout_constraintBottom_toTopOf="@+id/ed_weight"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_bmi"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/ed_weight"
-        android:layout_width="265sp"
-        android:layout_height="0dp"
-        android:layout_marginStart="73dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="154dp"
-        android:background="@drawable/log_but"
-        android:ems="10"
-        android:hint="    Weight Value"
-        android:inputType="textPersonName"
-        android:singleLine="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ed_height"
-        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_update"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="265sp"
+        android:layout_width="265dp"
         android:layout_height="48dp"
         android:layout_marginStart="73dp"
         android:layout_marginEnd="73dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="6dp"
         android:background="@drawable/log_but"
         android:backgroundTint="#F5D529"
         android:text="UPDATE"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layout_01"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/coordinatorLayout"
-        android:layout_width="406dp"
-        android:layout_height="97dp"
+        android:id="@+id/layout_01"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.bottomappbar.BottomAppBar
@@ -156,13 +199,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-
+                        android:id="@+id/imageView_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/bottom_btn1" />
 
                     <TextView
+                        android:id="@+id/bottom_bar_button_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Home"
@@ -181,11 +225,13 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/imageView_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/bottom_btn2" />
 
                     <TextView
+                        android:id="@+id/bottom_bar_button_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Profile"
@@ -204,11 +250,13 @@
                     android:visibility="invisible">
 
                     <ImageView
+                        android:id="@+id/imageView_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/bottom_btn1" />
 
                     <TextView
+                        android:id="@+id/bottom_bar_button_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Home"
@@ -227,11 +275,13 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/imageView_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/bottom_btn3" />
 
                     <TextView
+                        android:id="@+id/bottom_bar_button_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Support"
@@ -250,11 +300,13 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/imageView_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/bottom_btn4" />
 
                     <TextView
+                        android:id="@+id/bottom_bar_button_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Settings"
@@ -277,8 +329,7 @@
             android:tint="#FFFFFF"
             app:backgroundTint="#FFFF00"
             app:layout_anchor="@+id/app_bar"
-            app:maxImageSize="40dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:maxImageSize="40dp" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

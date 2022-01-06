@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import java.security.MessageDigest;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fitness247.R;
@@ -27,6 +27,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 
 public class SignUpActivity extends AppCompatActivity {
     Button btn_signup;
@@ -64,12 +68,39 @@ public class SignUpActivity extends AppCompatActivity {
     private void onClickSignUp(){
         String stringUser = addUser.getText().toString().trim();
         String stringPass = addPass.getText().toString().trim();
+
+        String md5Pass=null;
+        try
+        {
+            // Create MessageDigest instance for MD5
+            MessageDigest md = MessageDigest.getInstance("MD5");
+
+            // Add password bytes to digest
+            md.update(stringPass.getBytes());
+
+            // Get the hash's bytes
+            byte[] bytes = md.digest();
+
+            // This bytes[] has bytes in decimal format. Convert it to hexadecimal format
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < bytes.length; i++) {
+                sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+            }
+
+            // Get complete hashed password in hex format
+            md5Pass = sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Pass:"+ md5Pass);
+
         FirebaseAuth mAuth;
         mAuth = FirebaseAuth.getInstance();
 
         progressDialog.show();
 
-        mAuth.createUserWithEmailAndPassword(stringUser, stringPass)
+
+        mAuth.createUserWithEmailAndPassword(stringUser, md5Pass)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -96,7 +127,5 @@ public class SignUpActivity extends AppCompatActivity {
                         }
                     }
                 });
-
     }
-
 }

@@ -13,12 +13,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.bumptech.glide.Glide;
@@ -42,6 +44,7 @@ public class UserProfile extends AppCompatActivity {
     private ImageView avata;
     private TextView full_name,bim,height, weight;
     private Button btn_update;
+    LinearLayout home_button, supports_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,11 @@ public class UserProfile extends AppCompatActivity {
     }
     private void initUI()
     {
+        home_button = findViewById(R.id.home_button);
+        home_button.setOnClickListener(mListener);
+        supports_button = findViewById(R.id.support_button);
+        supports_button.setOnClickListener(mListener);
+
         avata = findViewById(R.id.img_user);
         full_name = findViewById(R.id.ed_full_name);
         bim = findViewById(R.id.tv_bmi);
@@ -60,6 +68,27 @@ public class UserProfile extends AppCompatActivity {
         weight = findViewById(R.id.ed_weight);
         btn_update = findViewById(R.id.btn_update);
     }
+    View.OnClickListener mListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View view)
+        {
+            int id = view.getId();
+            switch(id)
+            {
+                case R.id.home_button:
+                    Intent intent = new Intent(UserProfile.this,MainActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.support_button:
+                    intent = new Intent(UserProfile.this,Supports_Activity.class);
+                    startActivity(intent);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+    };
 
     private void showInfor(){
 
@@ -74,10 +103,10 @@ public class UserProfile extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 User value = dataSnapshot.getValue(User.class);
                 String name =value.getFullName();
-                Double hei = (Double) value.getHeight();
-                Double wei =(Double) value.getWeight();
+                Double hei = ((Double) value.getHeight());
+                Double wei =((Double) value.getWeight());
                 Double set_bmi = 0.0;
-                set_bmi = (double) Math.ceil((wei / (hei * hei)  * 10) / 10);;
+                set_bmi = (double) Math.ceil((wei / (hei * hei/10000)  * 10) / 10);;
                 String bmi_up = String.valueOf(set_bmi);
 
                 full_name.setText(name);
@@ -122,9 +151,9 @@ public class UserProfile extends AppCompatActivity {
         String name_ud = full_name.getText().toString().trim();
         String h = height.getText().toString().trim();
         String w =weight.getText().toString().trim();
-        Double hei_ud = Double.parseDouble(h);
+        Double hei_ud = Double.parseDouble(h) ;
         Double wei_ud = Double.parseDouble(w);
-        Double bmi_up = (double) Math.ceil((wei_ud / (hei_ud * hei_ud)  * 10) / 10);
+        Double bmi_up = (double) Math.ceil((wei_ud / (hei_ud * hei_ud/10000)  * 10) / 10);
 
         bim.setText(String.valueOf(bmi_up));
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();

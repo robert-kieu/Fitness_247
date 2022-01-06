@@ -3,6 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_intro.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_main.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_show_ex_detail.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_supports.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_user_profile.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_view_ex.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_view_exercise_lst.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_view_holder_ex_list.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_view_holder_main.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_view_landing.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_view_login_page.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_view_rest.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_view_type_exercise.xml" value="0.2554347826086957" />
+        <entry key="..\:/Fitness2472/app/src/main/res/layout/activity_view_type_exercise_holder.xml" value="0.2554347826086957" />
         <entry key="..\:/Fitness_247/Fitness2472/app/src/main/res/layout/activity_main.xml" value="0.14635416666666667" />
         <entry key="..\:/Fitness_247/Fitness2472/app/src/main/res/layout/activity_show_ex_detail.xml" value="0.27291666666666664" />
         <entry key="..\:/Fitness_247/Fitness2472/app/src/main/res/layout/activity_user_profile.xml" value="0.14270833333333333" />
