@@ -37,6 +37,7 @@ public class Ex_PracticeActivity extends AppCompatActivity implements Serializab
     private ArrayList<Ex_Lst_Domain> object_lst;
     private int start, current, end;
     public int sum_duration = 0, sum_kcal = 0;
+    private int delta_rest = 20;
 
     @Override
     protected void onCreate(Bundle saveInstanceState){
@@ -55,44 +56,87 @@ public class Ex_PracticeActivity extends AppCompatActivity implements Serializab
     }
 
     private void practice() throws InterruptedException {
+        sum_duration += object_lst.get(current).getDuration() * 1000;
+        ex_title.setText(object_lst.get(current).getTitle());
+        CountDownTimer timer = countdown_ex(object_lst.get(current).getDuration());
+        timer.start();
+
         next_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_SHORT).show();
+                if (current < end - 1){
+                    timer.cancel();
+                    current++;
+                    try {
+                        practice();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else {
+                    timer.cancel();
+                    Intent intent = new Intent(getBaseContext(), Ex_doneActivity.class);
+                    intent.putExtra("sum_duration", sum_duration);
+                    intent.putExtra("sum_kcal", sum_kcal);
+                    startActivity(intent);
+                }
             }
         });
         previous_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_SHORT).show();
+                if (current > start){
+                    timer.cancel();
+                    current--;
+                    try {
+                        practice();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else{
+                    Toast.makeText(v.getContext(),"You are at the start!",Toast.LENGTH_SHORT).show();
+                }
             }
         });
-        sum_duration += object_lst.get(current).getDuration() * 1000;
-        ex_title.setText(object_lst.get(current).getTitle());
-        countdown_ex(object_lst.get(current).getDuration());
     }
 
     private void rest() throws InterruptedException {
+        ex_title.setText("Break Time");
+        CountDownTimer timer_rest = countdown_rest(object_lst.get(current - 1).getDuration() - delta_rest);
+        timer_rest.start();
         next_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_SHORT).show();
+                if (current <= end){
+                    timer_rest.cancel();
+                    try {
+                        practice();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
         previous_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(),"Not implement!",Toast.LENGTH_SHORT).show();
+                if (current > start){
+                    timer_rest.cancel();
+                    current--;
+                    try {
+                        practice();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
-
-        ex_title.setText("Break Time");
-        countdown_rest(object_lst.get(current - 1).getDuration() - 20);
     }
 
 
-    private void countdown_ex(int time){
-        new CountDownTimer(time * 1000 + 1, 1000) {
+    private CountDownTimer countdown_ex(int time){
+        CountDownTimer a = new CountDownTimer(time * 1000 + 1000, 1000) {
             public void onTick(long millisUntilFinished) {
                 // Used for formatting digit to be in 2 digits only
                 NumberFormat f = new DecimalFormat("00");
@@ -118,11 +162,12 @@ public class Ex_PracticeActivity extends AppCompatActivity implements Serializab
                     startActivity(intent);
                 }
             }
-        }.start();
+        };
+        return a;
     }
 
-    private void countdown_rest(int time){
-        new CountDownTimer(time * 1000 + 1, 1000) {
+    private CountDownTimer countdown_rest(int time){
+        CountDownTimer a = new CountDownTimer(time * 1000 + 1000, 1000) {
             public void onTick(long millisUntilFinished) {
                 // Used for formatting digit to be in 2 digits only
                 NumberFormat f = new DecimalFormat("00");
@@ -133,7 +178,7 @@ public class Ex_PracticeActivity extends AppCompatActivity implements Serializab
             // When the task is over it will print 00:00 there
             public void onFinish() {
                 ex_duration.setText("00:00");
-                if (current < 2){
+                if (current < end){
                     try {
                         practice();
                     } catch (InterruptedException e) {
@@ -145,7 +190,8 @@ public class Ex_PracticeActivity extends AppCompatActivity implements Serializab
                     startActivity(intent);
                 }
             }
-        }.start();
+        };
+        return a;
     }
 
     private void initView() {
