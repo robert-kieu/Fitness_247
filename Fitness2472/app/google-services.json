@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "519267170642",
+    "project_id": "fitness247-d2746",
+    "storage_bucket": "fitness247-d2746.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519267170642:android:3efcad7369b0eca0d9e28b",
+        "android_client_info": {
+          "package_name": "com.example.fitness247"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "519267170642-8vi15kfdod434csndij9e99t8dgs62t8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fitness247",
+            "certificate_hash": "292b7c257aacab78a1384a88aa8ed896e97e0193"
+          }
+        },
+        {
+          "client_id": "519267170642-l365ses0s9bid22btcs3uslrp69610vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcszHA7TOhOpSPawo_3EDGy8g3nYrQtWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "519267170642-l365ses0s9bid22btcs3uslrp69610vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
