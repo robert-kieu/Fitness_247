@@ -33,7 +33,7 @@ import java.security.NoSuchAlgorithmException;
 
 
 public class SignUpActivity extends AppCompatActivity {
-    Button btn_signup;
+    Button btn_signup, back_sign_up;
     TextView addUser, addPass;
     ProgressDialog progressDialog;
     @Override
@@ -42,6 +42,13 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
         initUI();
         innitListener();
+        back_sign_up =(Button)findViewById(R.id.back_sign_up);
+        back_sign_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(),Landing_Activity.class));
+            }
+        });
     }
 
     private void initUI()

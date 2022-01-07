@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/linear_bkgr"
     android:focusable="true"
     android:focusableInTouchMode="true"
     tools:context=".Activity.MainActivity">
@@ -12,7 +13,9 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="@drawable/linear_bkgr"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
@@ -57,6 +60,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="132dp"
         android:layout_marginBottom="64dp"
+        android:background="@drawable/linear_bkgr"
         app:layout_constraintBottom_toTopOf="@+id/layout_01"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -215,11 +219,11 @@
             android:id="@+id/article_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FFFF00"
+            android:backgroundTint="#fe702e"
             android:elevation="3dp"
             android:src="@drawable/bottom_bar_article_button"
             android:tint="#FFFFFF"
-            app:backgroundTint="#FFFF00"
+            app:backgroundTint="#fe702e"
             app:layout_anchor="@+id/app_bar"
             app:maxImageSize="40dp" />
 
