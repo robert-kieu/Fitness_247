@@ -11,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitness247">
         <activity android:name=".Activity.Landing_Activity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Activity.Ex_typeActivity"/>
         <activity android:name=".Activity.Ex_doneActivity"/>
@@ -21,10 +24,7 @@
         <activity android:name=".Activity.Ex_lstActivity" />
         <activity android:name=".Activity.Show_ex_detailActivity" />
         <activity android:name=".Activity.Ex_PracticeActivity" />
-        <activity android:name=".Activity.MainActivity"><intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+        <activity android:name=".Activity.MainActivity"/>
         <activity android:name=".Activity.SignUpActivity"/>
     </application
         >

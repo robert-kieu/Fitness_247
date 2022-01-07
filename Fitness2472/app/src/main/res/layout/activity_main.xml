@@ -121,13 +121,13 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView_home"
+                        android:id="@+id/imageView_pro"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/bottom_btn2" />
 
                     <TextView
-                        android:id="@+id/bottom_bar_button_home"
+                        android:id="@+id/bottom_bar_button_pro"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Profile"
@@ -146,13 +146,13 @@
                     android:visibility="invisible">
 
                     <ImageView
-                        android:id="@+id/imageView_home"
+                        android:id="@+id/imageView_no"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/bottom_btn1" />
 
                     <TextView
-                        android:id="@+id/bottom_bar_button_home"
+                        android:id="@+id/bottom_bar_button_no"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Home"
@@ -171,13 +171,13 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView_home"
+                        android:id="@+id/imageView_supports"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/bottom_btn3" />
 
                     <TextView
-                        android:id="@+id/bottom_bar_button_home"
+                        android:id="@+id/bottom_bar_button_supports"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Support"
@@ -196,13 +196,13 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView_home"
+                        android:id="@+id/imageView_settings"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/bottom_btn4" />
 
                     <TextView
-                        android:id="@+id/bottom_bar_button_home"
+                        android:id="@+id/bottom_bar_button_settings"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Settings"

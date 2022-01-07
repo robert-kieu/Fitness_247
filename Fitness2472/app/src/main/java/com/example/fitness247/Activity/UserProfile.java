@@ -43,7 +43,7 @@ import java.util.concurrent.atomic.AtomicMarkableReference;
 public class UserProfile extends AppCompatActivity {
     private ImageView avata;
     private TextView full_name,bim,height, weight;
-    private Button btn_update;
+    Button btn_update,btn_logout;
     LinearLayout home_button, supports_button;
 
     @Override
@@ -56,8 +56,11 @@ public class UserProfile extends AppCompatActivity {
     }
     private void initUI()
     {
+        btn_logout = findViewById(R.id.btn_logout);
+
         home_button = findViewById(R.id.home_button);
         home_button.setOnClickListener(mListener);
+
         supports_button = findViewById(R.id.support_button);
         supports_button.setOnClickListener(mListener);
 
@@ -68,6 +71,7 @@ public class UserProfile extends AppCompatActivity {
         weight = findViewById(R.id.ed_weight);
         btn_update = findViewById(R.id.btn_update);
     }
+
     View.OnClickListener mListener = new View.OnClickListener(){
         @Override
         public void onClick(View view)
@@ -135,6 +139,16 @@ public class UserProfile extends AppCompatActivity {
 //                onClickRequestPermission();
 //            }
 //        });
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(UserProfile.this,Login_Activity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         btn_update.setOnClickListener(new View.OnClickListener() {
 
